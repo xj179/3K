@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/x6"
+    android:paddingLeft="@dimen/x10"
+    android:paddingRight="@dimen/x15"
+    android:paddingTop="@dimen/x6" >
+
+    <ImageView
+        android:id="@+id/item_voice_fluctuate"
+        android:layout_width="@dimen/x30"
+        android:layout_height="@dimen/x30"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/x10"
+        android:src="@drawable/animation1"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/item_voice_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/item_voice_time"
+        android:layout_toRightOf="@id/item_voice_fluctuate"
+        android:maxLines="2"
+        android:text="盗墓笔记-寻龙诀"
+        android:textColor="@color/black"
+        android:textSize="@dimen/x15" />
+
+    <TextView
+        android:id="@+id/item_voice_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/x10"
+        android:text="58:16"
+        android:textColor="@color/colorAccent" />
+
+</RelativeLayout>

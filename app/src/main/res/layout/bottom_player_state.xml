@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_play_rl"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x80"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/test_bg_bottom"
+    android:focusable="true"
+    android:paddingLeft="@dimen/x15"
+    android:paddingRight="@dimen/x15" >
+
+    <com.ijiakj.radio.widget.CircleImageView
+        android:id="@+id/bottom_play_iv"
+        android:layout_width="@dimen/x60"
+        android:layout_height="@dimen/x60"
+        android:layout_centerVertical="true"
+        android:background="@drawable/shape_round_stroke_bg"
+        android:src="@drawable/cover" />
+
+    <ImageView
+        android:id="@+id/bottom_play_fluctuate"
+        android:layout_width="@dimen/x45"
+        android:layout_height="@dimen/x35"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/article_sound_waves_1" />
+
+    <com.ijiakj.radio.widget.MarqueeText
+        android:id="@+id/bottom_play_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/x15"
+        android:layout_marginRight="@dimen/x15"
+        android:layout_toLeftOf="@id/bottom_play_fluctuate"
+        android:layout_toRightOf="@id/bottom_play_iv"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:lines="1"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="欢迎使用三K彩软件!"
+        android:textColor="@color/black"
+        android:textSize="@dimen/x25" />
+
+</RelativeLayout>

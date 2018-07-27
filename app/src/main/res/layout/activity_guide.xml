@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:gravity="center" >
+    
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/guide_ima" />
+    
+    <RelativeLayout
+        android:id="@+id/native_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent" 
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/native_ad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:nextFocusLeft="@+id/skip_ad"
+            android:nextFocusRight="@+id/skip_ad"
+            android:nextFocusUp="@+id/skip_ad"
+            android:nextFocusDown="@+id/skip_ad"
+            android:scaleType="fitCenter" />
+        
+        <TextView
+            android:id="@+id/skip_ad"
+            android:layout_width="@dimen/x60"
+            android:layout_height="@dimen/x30"
+            android:background="@drawable/btn_gray_stroke_selector"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/x15"
+            android:nextFocusLeft="@+id/native_ad"
+            android:nextFocusRight="@+id/native_ad"
+            android:nextFocusUp="@+id/native_ad"
+            android:nextFocusDown="@+id/native_ad"
+            android:gravity="center"
+            android:focusable="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x10"
+            android:visibility="invisible"/>
+        
+        <TextView 
+            android:id="@+id/ad_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:textSize="@dimen/x15"
+            android:textColor="@color/white_gray"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"/>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:text="广告"
+            android:textSize="@dimen/x15"
+            android:textColor="@color/white_gray"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

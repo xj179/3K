@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context="com.ijiakj.radio.activity.BroadcastListActivity" >
+
+    <include layout="@layout/top_title" />
+
+    <com.ijiakj.radio.widget.XListView
+        android:id="@+id/activity_broadcast_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_play_rl"
+        android:layout_below="@+id/title_rl" >
+    </com.ijiakj.radio.widget.XListView>
+
+    <include
+        android:id="@+id/activity_broadcast_lv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/pager_error" />
+
+    <View
+        android:id="@+id/bottom_play_rl_yin"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_above="@+id/bottom_play_rl"
+        android:background="#304d4d4d" />
+
+    <include layout="@layout/bottom_player_state" />
+
+</RelativeLayout>

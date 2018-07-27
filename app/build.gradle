@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "28.0.1"
+
+    defaultConfig {
+        applicationId "com.ijiakj.radio"
+        minSdkVersion 11
+        targetSdkVersion 21
+
+        ndk{
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : "com.ijiakj.radio",
+                JPUSH_APPKEY : "c4d0b1a1b90165bd377361b8", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+    }
+}
+
+dependencies {
+    api 'com.android.support:support-v4:24+'
+    api 'com.google.code.gson:gson:2.2.4'
+    api files('libs/Ad_Android_SDK.jar')
+    api files('libs/afinal_0.5.1_bin.jar')
+    api files('libs/AMap_Location_V3.1.0_20161027.jar')
+    api files('libs/httpclient-4.3.5.jar')
+    api files('libs/httpcore-4.3.2.jar')
+    api files('libs/httpmime-4.3.5.jar')
+    api files('libs/litepal.jar')
+    api files('libs/okhttp-3.3.1.jar')
+    api files('libs/okio-1.8.0.jar')
+    api files('libs/picasso-2.5.2.jar')
+    api files('libs/TingPhoneOpenSDK_5.2.0.jar')
+    api files('libs/universal-image-loader-1.9.2.jar')
+    api files('libs/volley.jar')
+    api files('libs/XmDownload_1.4.jar')
+    api files('libs/xutils3.jar')
+    /*   极光推送*/
+    api 'cn.jiguang.sdk:jpush:3.1.5'
+    // 此处以JPush 3.1.5 版本为例。
+    api 'cn.jiguang.sdk:jcore:1.2.3'
+    // 此处以JCore 1.2.3 版本为例。
+    implementation 'com.google.code.gson:gson:2.8.5'
+}
+

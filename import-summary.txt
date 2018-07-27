@@ -1,0 +1,80 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* ic_launcher-web.png
+* proguard-project.txt
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:19.1.0
+gson-2.2.4.jar => com.google.code.gson:gson:2.2.4
+
+Potentially Missing Dependency:
+-------------------------------
+When we replaced the following .jar files with a Gradle dependency, we
+inferred the dependency version number from the filename. This
+specific version may not actually be available from the repository.
+If you get a build error stating that the dependency is missing, edit
+the version number to for example "+" to pick up the latest version
+instead. (This may require you to update your code if the library APIs
+have changed.)
+
+gson-2.2.4.jar => version 2.2.4 in com.google.code.gson:gson:2.2.4
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app\src\main\AndroidManifest.xml
+* assets\ => app\src\main\assets\
+* libs\Ad_Android_SDK.jar => app\libs\Ad_Android_SDK.jar
+* libs\afinal_0.5.1_bin.jar => app\libs\afinal_0.5.1_bin.jar
+* libs\AMap_Location_V3.1.0_20161027.jar => app\libs\AMap_Location_V3.1.0_20161027.jar
+* libs\armeabi\libsoundtouch.so => app\src\main\jniLibs\armeabi\libsoundtouch.so
+* libs\armeabi\libxmediaplayer.so => app\src\main\jniLibs\armeabi\libxmediaplayer.so
+* libs\armeabi\libxmediaplayer_x.so => app\src\main\jniLibs\armeabi\libxmediaplayer_x.so
+* libs\armeabi\libxmediaplayerv7.so => app\src\main\jniLibs\armeabi\libxmediaplayerv7.so
+* libs\httpclient-4.3.5.jar => app\libs\httpclient-4.3.5.jar
+* libs\httpcore-4.3.2.jar => app\libs\httpcore-4.3.2.jar
+* libs\httpmime-4.3.5.jar => app\libs\httpmime-4.3.5.jar
+* libs\litepal.jar => app\libs\litepal.jar
+* libs\okhttp-3.3.1.jar => app\libs\okhttp-3.3.1.jar
+* libs\okio-1.8.0.jar => app\libs\okio-1.8.0.jar
+* libs\picasso-2.5.2.jar => app\libs\picasso-2.5.2.jar
+* libs\TingPhoneOpenSDK_5.2.0.jar => app\libs\TingPhoneOpenSDK_5.2.0.jar
+* libs\universal-image-loader-1.9.2.jar => app\libs\universal-image-loader-1.9.2.jar
+* libs\volley.jar => app\libs\volley.jar
+* libs\XmDownload_1.4.jar => app\libs\XmDownload_1.4.jar
+* libs\xutils3.jar => app\libs\xutils3.jar
+* res\ => app\src\main\res\
+* src\ => app\src\main\java\
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

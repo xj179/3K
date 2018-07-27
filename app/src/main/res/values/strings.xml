@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">3K彩软件</string>
+
+
+
+    <string name="header_hint_refresh_normal">下拉刷新</string>
+    <string name="header_hint_refresh_ready">松开刷新</string>
+    <string name="header_hint_refresh_loading">正在刷新&#8230;</string>
+    <string name="header_hint_refresh_time">时间 ：</string>
+    <string name="footer_hint_load_normal">加载更多</string>
+    <string name="footer_hint_load_ready">松开加载更多</string>
+    <string name="commonlistadapter_tag">commonlistadapter_tag</string>
+
+
+
+    <!-- 更新相关 -->
+    <string name="UMUpdateTitle">发现新版本</string>
+	<string name="UMGprsCondition">（提示：非WIFI环境）</string>
+	<string name="UMUpdateNow">立即更新</string>
+	<string name="UMNotNow">以后再说</string>
+	<string name="UMIgnore">忽略该版</string>
+	<string name="no_data">No data</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="down_update">下载更新</string>
+    <string name="redown">是否重新下载更新？</string>
+    <string name="down_success">下载成功，点击安装</string>
+    <string name="down_fail">下载失败, 点击重新下载</string>
+    <string name="data_no">无相关数据</string>
+
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true" >
+
+    <!-- 顶部标题 -->
+
+    <include layout="@layout/top_title" />
+    <!-- 内容区,在代码中动态加入! -->
+
+    <FrameLayout
+        android:id="@+id/category_result_fl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/bottom_play_rl"
+        android:layout_below="@+id/title_rl"
+        android:layout_weight="1" />
+
+    <View
+        android:id="@+id/bottom_play_rl_yin"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_above="@+id/bottom_play_rl"
+        android:background="#304d4d4d" />
+    <!-- 底部播放转态显示 -->
+
+    <include layout="@layout/bottom_player_state" />
+
+</RelativeLayout>

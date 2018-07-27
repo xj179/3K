@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/item_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/x6"
+        android:paddingLeft="@dimen/x10"
+        android:paddingRight="@dimen/x15"
+        android:paddingTop="@dimen/x6" >
+
+        <ImageView
+            android:id="@+id/item_common_icon_iv"
+            android:layout_width="@dimen/x60"
+            android:layout_height="@dimen/x60"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x10"
+            android:src="@drawable/min_default" />
+
+        <TextView
+            android:id="@+id/item_common_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/item_common_iv"
+            android:layout_toRightOf="@id/item_common_icon_iv"
+            android:maxLines="2"
+            android:text="盗墓笔记-寻龙诀"
+            android:textColor="@color/black"
+            android:textSize="@dimen/x20" />
+
+        <ImageView
+            android:id="@+id/item_common_iv"
+            android:layout_width="@dimen/x25"
+            android:layout_height="@dimen/x25"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x10"
+            android:src="@drawable/play_min" />
+
+        <TextView
+            android:id="@+id/ad_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@color/gray"
+            android:gravity="center"
+            android:textColor="@color/white_gray"
+            android:textSize="@dimen/x10"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/ad_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/gray"
+            android:gravity="center"
+            android:text="广告"
+            android:textColor="@color/white_gray"
+            android:textSize="@dimen/x10"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<resources>
+
+    <color name="transparent">#00000000</color>
+    <color name="background">#F7F4F0</color>
+    <color name="title_color">#ff4f57</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#FF000001</color>
+    <color name="red">#ff0000</color>
+    <color name="blue">#2986eb</color>
+    <color name="yellow">#fd9901</color>
+    <color name="yellow_lucency">#A6f99905</color>
+    <color name="green">#03ac29</color>
+    <color name="update_button_yellow">#fd9901</color>
+    <color name="color_foc">#ff9a00</color>
+
+    <color name="tab_indicator_selected">#ff4f57</color>
+    <color name="tab_text_selected">#ff4f57</color>
+    <color name="tab_text_normal">#333333</color>
+
+    <color name="item_divider">#ffd7d7d7</color>
+    <color name="bg">#66cccccc</color>
+    <color name="gray">#888b8d</color>
+    <color name="grays">#ff666666</color>
+    <color name="text_black">#333</color>
+    <color name="item_download_bg">#cccccccc</color>
+    <color name="menu_bg_normal">#f0f1f3</color>
+    <color name="menu_bg_press">#cecece</color>
+    <color name="app_detail_safe_normal">#999999</color>
+    <color name="app_detail_safe_warning">#ff8800</color>
+    <color name="title_text_color">#cbf1e4</color>
+    <color name="line_color">#cfcfcf</color>
+
+
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="dailog_pressed_gray">#737373</color>
+    <color name="white_gray">#ebebeb</color>
+    <color name="update_button_gray">#c2c2c2</color>
+    <color name="update_button_blue">#008bea</color>
+
+
+</resources>

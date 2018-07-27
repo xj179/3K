@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- 导航条 -->
+
+    <com.ijiakj.radio.widget.PagerSlidingTabStrip
+        android:id="@+id/category_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x48"
+        app:pstsIndicatorColor="@color/title_color"
+        app:pstsIndicatorHeight="@dimen/x3"
+        app:pstsSelectedTabTextColor="@color/tab_text_selected"
+        app:pstsSelectedTabTextSize="@dimen/x22"
+        app:pstsTabTextColor="@color/white"
+        app:pstsTabTextSize="@dimen/x22" />
+    <!-- viewpager -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/category_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+</LinearLayout>

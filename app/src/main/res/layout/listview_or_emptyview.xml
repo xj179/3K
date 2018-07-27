@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.ijiakj.radio.widget.XListView
+        android:id="@+id/search_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="0.5px" >
+    </com.ijiakj.radio.widget.XListView>
+
+    <include
+        android:id="@+id/category_lv_remind"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/pager_error" />
+
+</RelativeLayout>

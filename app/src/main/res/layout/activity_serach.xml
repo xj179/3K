@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x60"
+        android:background="@color/title_color" >
+
+        <ImageView
+            android:id="@+id/title_back_iv"
+            android:layout_width="@dimen/x60"
+            android:layout_height="@dimen/x60"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_transparent_selector"
+            android:focusable="true"
+            android:padding="@dimen/x15"
+            android:src="@drawable/back" />
+
+        <ImageView
+            android:id="@+id/title_serach_iv"
+            android:layout_width="@dimen/x60"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_transparent_selector"
+            android:focusable="true"
+            android:padding="@dimen/x15"
+            android:src="@drawable/serach" />
+
+        <EditText
+            android:id="@+id/title_et"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/x10"
+            android:layout_marginLeft="@dimen/x2"
+            android:layout_marginRight="@dimen/x2"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_toLeftOf="@id/title_serach_iv"
+            android:layout_toRightOf="@id/title_back_iv"
+            android:background="@drawable/seek_edit_bg"
+            android:cursorVisible="true"
+			android:textCursorDrawable="@drawable/color_cursor"
+            android:hint="输入关键字"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/x5"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/x21" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/search_hot_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x10"
+            android:text="热门搜索" />
+        <!-- 流式布局 -->
+
+        <com.ijiakj.radio.widget.FlowLayout
+            android:id="@+id/flow_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x10" >
+        </com.ijiakj.radio.widget.FlowLayout>
+    </LinearLayout>
+
+    <!-- 导航条 -->
+
+    <com.ijiakj.radio.widget.PagerSlidingTabStrip
+        android:id="@+id/search_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x48"
+        android:background="@color/white_gray"
+        android:visibility="gone"
+        app:pstsIndicatorColor="@color/title_color"
+        app:pstsIndicatorHeight="@dimen/x3"
+        app:pstsSelectedTabTextColor="@color/tab_text_selected"
+        app:pstsSelectedTabTextSize="@dimen/x22"
+        app:pstsShouldExpand="true"
+        app:pstsTabTextColor="@color/tab_text_normal"
+        app:pstsTabTextSize="@dimen/x22" />
+    <!-- viewpager -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/search_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/bottom_play_rl"
+        android:layout_weight="1"
+        android:background="@color/white_gray"
+        android:visibility="gone" />
+
+</LinearLayout>

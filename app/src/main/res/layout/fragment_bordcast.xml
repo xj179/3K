@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:id="@+id/cast_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+            <RelativeLayout
+                android:id="@+id/bordcast_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_gray"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/bordcast_ad"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x110"
+                    android:focusable="true"
+                    android:nextFocusUp="@+id/skip_ad"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:id="@+id/ad_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:textColor="@color/white_gray"
+                    android:textSize="@dimen/x10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:text="广告"
+                    android:textColor="@color/white_gray"
+                    android:textSize="@dimen/x10" />
+            </RelativeLayout>
+
+            <com.ijiakj.radio.widget.MyGridView
+                android:id="@+id/fragment_bordcast_gv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="2" >
+            </com.ijiakj.radio.widget.MyGridView>
+
+            <com.ijiakj.radio.widget.MyListView
+                android:id="@+id/fragment_bordcast_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.ijiakj.radio.widget.MyListView>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

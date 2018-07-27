@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_item_gv_bg" >
+
+    <ImageView
+        android:id="@+id/item_broadcast_iv"
+        android:layout_width="@dimen/x25"
+        android:layout_height="@dimen/x25"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/x10"
+        android:layout_marginLeft="@dimen/x20" />
+
+    <TextView
+        android:id="@+id/item_broadcast_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/x60"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_toRightOf="@id/item_broadcast_iv"
+        android:maxLines="1"
+        android:text="爱加电台"
+        android:textColor="@color/black"
+        android:textSize="@dimen/x22" />
+
+</RelativeLayout>

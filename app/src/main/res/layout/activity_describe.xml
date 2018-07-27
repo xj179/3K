@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_gray"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context="com.ijiakj.radio.activity.DescribeActivity" >
+
+    <TextView
+        android:id="@+id/describe_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/title_color"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="节目介绍"
+        android:textColor="@color/white"
+        android:textSize="@dimen/x22" />
+
+    <TextView
+        android:id="@+id/describe_close_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x60"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_transparent_selector"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="关闭"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/x22" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/describe_close_btn"
+        android:background="@color/app_detail_safe_normal" />
+
+    <com.ijiakj.radio.widget.ObservableScrollView
+        android:id="@+id/describe_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/describe_close_btn"
+        android:layout_below="@+id/describe_title" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/x10"
+            android:paddingBottom="@dimen/x20"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/describe_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="名称:"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/x20" />
+
+            <TextView
+                android:id="@+id/describe_Anchor_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="主播:"
+                android:layout_marginTop="@dimen/x15"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/x20" />
+
+            <TextView
+                android:id="@+id/describe_count_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="播放:"
+                android:layout_marginTop="@dimen/x15"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/x20" />
+
+            <TextView
+                android:id="@+id/describe_category_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="分类:"
+                android:layout_marginTop="@dimen/x15"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/x20" />
+
+            <TextView
+                android:id="@+id/describe_content_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="内容简介:"
+                android:layout_marginTop="@dimen/x15"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/x20" />
+        </LinearLayout>
+    </com.ijiakj.radio.widget.ObservableScrollView>
+
+</RelativeLayout>
