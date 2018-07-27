@@ -25,7 +25,7 @@
 
         <ImageView
             android:id="@+id/footer_arrow"
-            android:layout_width="@dimen/x20"
+            android:layout_width="@dimen/x14"
             android:layout_height="@dimen/x50"
             android:layout_marginRight="@dimen/x30"
             android:layout_toLeftOf="@id/footer_hint_text"

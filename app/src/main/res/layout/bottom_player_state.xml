@@ -43,6 +43,6 @@
         android:singleLine="true"
         android:text="欢迎使用三K彩软件!"
         android:textColor="@color/black"
-        android:textSize="@dimen/x25" />
+        android:textSize="@dimen/x16" />
 
 </RelativeLayout>

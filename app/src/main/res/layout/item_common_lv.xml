@@ -30,12 +30,12 @@
             android:maxLines="2"
             android:text="盗墓笔记-寻龙诀"
             android:textColor="@color/black"
-            android:textSize="@dimen/x20" />
+            android:textSize="@dimen/x14" />
 
         <ImageView
             android:id="@+id/item_common_iv"
-            android:layout_width="@dimen/x25"
-            android:layout_height="@dimen/x25"
+            android:layout_width="@dimen/x16"
+            android:layout_height="@dimen/x16"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/x10"

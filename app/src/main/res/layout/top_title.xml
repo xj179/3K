@@ -43,6 +43,6 @@
         android:singleLine="true"
         android:text="爱加电台"
         android:textColor="@color/white"
-        android:textSize="@dimen/x25" />
+        android:textSize="@dimen/x16" />
 
 </RelativeLayout>

@@ -25,7 +25,7 @@
             android:gravity="center"
             android:text="分类"
             android:textColor="@color/selector_blue_white_color"
-            android:textSize="@dimen/x22" />
+            android:textSize="@dimen/x14" />
 
         <TextView
             android:id="@+id/main_broadcast_tv"
@@ -37,7 +37,7 @@
             android:gravity="center"
             android:text="广播"
             android:textColor="@color/selector_blue_white_color"
-            android:textSize="@dimen/x22" />
+            android:textSize="@dimen/x14" />
 
         <ImageView
             android:id="@+id/main_serach"

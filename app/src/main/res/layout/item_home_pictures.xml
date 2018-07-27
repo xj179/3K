@@ -15,7 +15,7 @@
     <LinearLayout
         android:id="@+id/item_home_picture_container_indicator"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x25"
+        android:layout_height="@dimen/x16"
         android:layout_alignParentBottom="true"
         android:background="#32252424"
         android:gravity="center"

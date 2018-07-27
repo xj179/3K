@@ -14,9 +14,9 @@
         app:pstsIndicatorColor="@color/title_color"
         app:pstsIndicatorHeight="@dimen/x3"
         app:pstsSelectedTabTextColor="@color/tab_text_selected"
-        app:pstsSelectedTabTextSize="@dimen/x22"
+        app:pstsSelectedTabTextSize="@dimen/x14"
         app:pstsTabTextColor="@color/white"
-        app:pstsTabTextSize="@dimen/x22" />
+        app:pstsTabTextSize="@dimen/x14" />
     <!-- viewpager -->
 
     <android.support.v4.view.ViewPager

@@ -6,11 +6,11 @@
 
     <ImageView
         android:id="@+id/item_broadcast_iv"
-        android:layout_width="@dimen/x25"
-        android:layout_height="@dimen/x25"
+        android:layout_width="@dimen/x16"
+        android:layout_height="@dimen/x16"
         android:layout_centerVertical="true"
         android:layout_marginRight="@dimen/x10"
-        android:layout_marginLeft="@dimen/x20" />
+        android:layout_marginLeft="@dimen/x14" />
 
     <TextView
         android:id="@+id/item_broadcast_tv"
@@ -22,6 +22,6 @@
         android:maxLines="1"
         android:text="爱加电台"
         android:textColor="@color/black"
-        android:textSize="@dimen/x22" />
+        android:textSize="@dimen/x14" />
 
 </RelativeLayout>
