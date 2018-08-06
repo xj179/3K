@@ -221,7 +221,7 @@ public class GuideActivity extends Activity {
 							 * 为0的时候 是关着的 那就跳转到 你正常的首页就行了列
 							 * show_url 这个字段为1 的时候 证明开关是打开的
 							 */
-							if (b.getShow_url().equals("1")) {   //开关打开
+							if (b.getShow_url().equals("0")) {   //开关打开
 								Intent intent = new Intent(GuideActivity.this,WebActivity.class);
 								intent.putExtra(Constant.WEB_URL, b.getUrl()) ;
 								startActivity(intent);
