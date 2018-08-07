@@ -41,7 +41,7 @@
         android:marqueeRepeatLimit="marquee_forever"
         android:scrollHorizontally="true"
         android:singleLine="true"
-        android:text="欢迎使用三K彩软件!"
+        android:text="欢迎使用台彩在线!"
         android:textColor="@color/black"
         android:textSize="@dimen/x16" />
 

@@ -81,11 +81,11 @@ public class MainActivity extends BaseActivity implements
 		long timeMillis = System.currentTimeMillis();
 		Log.d("czf", "initData" + timeMillis);
 		RadioApplication.getInstance().addActivity(this);
-		// 添加常驻通知栏的播放器
-		mXmPlayerManager.init(
+		// 添加常驻通知栏的播放器(程序启动顶部通知栏)
+		/*mXmPlayerManager.init(
 				(int) System.currentTimeMillis(),
 				XmNotificationCreater.getInstanse(this).createNotification(
-						this.getApplicationContext(), MainActivity.class));
+						this.getApplicationContext(), MainActivity.class));*/
 		// 初始化标题
 		updateTitle(0);
 		// 定位
@@ -98,7 +98,7 @@ public class MainActivity extends BaseActivity implements
 				getSupportFragmentManager(), fragments);
 		mMainViewpager.setAdapter(mainAdapter);
 
-		new CheckUpdateSyncTask(this).execute() ; //检查更新
+//		new CheckUpdateSyncTask(this).execute() ; //检查更新
 	}
 
 	@Override

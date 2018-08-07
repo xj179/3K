@@ -170,10 +170,14 @@ public class PlayActivity extends BaseActivity {
 			mXmPlayerManager.playPre();
 			break;
 		case R.id.play_or_pause_iv: // 播放或暂停
-			if (mXmPlayerManager.isPlaying()) {
-				mXmPlayerManager.pause();
-			} else {
-				mXmPlayerManager.play();
+			try {
+				if (mXmPlayerManager.isPlaying()) {
+                    mXmPlayerManager.pause();
+                } else {
+                    mXmPlayerManager.play();
+                }
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 			break;
 		case R.id.next_iv: // 下一曲

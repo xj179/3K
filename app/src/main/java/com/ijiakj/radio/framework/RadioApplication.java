@@ -110,7 +110,7 @@ public class RadioApplication extends Application {
     //程序的入口
     public void onCreate() {
     	x.Ext.init(this);
-    	getUserMsg();
+//    	getUserMsg();
         //上下文
         mContext = getApplicationContext();
         AdUtils.getAllAdId(mContext);
