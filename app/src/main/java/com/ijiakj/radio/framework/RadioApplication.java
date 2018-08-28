@@ -117,8 +117,8 @@ public class RadioApplication extends Application {
         //得到主线程id
         mMainThreadId = android.os.Process.myTid();
         mMainThreadHandler = new Handler();
-        CrashHandler crashHandler = CrashHandler.getInstance();
-		crashHandler.init(getApplicationContext());
+ /*       CrashHandler crashHandler = CrashHandler.getInstance();
+		crashHandler.init(getApplicationContext());*/
 		
 		mQueues= Volley.newRequestQueue(mContext,new MultiPartStack());
 

@@ -16,6 +16,8 @@
     <color name="update_button_yellow">#fd9901</color>
     <color name="color_foc">#ff9a00</color>
 
+    <color name="activityBg">#f1f1f1</color>
+
     <color name="tab_indicator_selected">#ff4f57</color>
     <color name="tab_text_selected">#ff4f57</color>
     <color name="tab_text_normal">#333333</color>

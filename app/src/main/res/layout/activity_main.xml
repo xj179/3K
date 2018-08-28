@@ -41,12 +41,21 @@
 
         <ImageView
             android:id="@+id/main_serach"
-            android:layout_width="60dp"
+            android:layout_width="40dp"
             android:layout_height="match_parent"
             android:background="@drawable/btn_transparent_selector"
             android:focusable="true"
-            android:padding="15dp"
+            android:padding="5dp"
             android:src="@drawable/serach" />
+
+        <ImageView
+            android:id="@+id/main_setting"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_transparent_selector"
+            android:focusable="true"
+            android:padding="5dp"
+            android:src="@drawable/icon_setting" />
     </LinearLayout>
 
     <android.support.v4.view.ViewPager

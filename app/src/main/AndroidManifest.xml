@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ijiakj.radio"
-    android:versionCode="11"
-    android:versionName="2.2" >
+    android:versionCode="12"
+    android:versionName="2.3">
 
     <uses-sdk
         android:minSdkVersion="11"
@@ -35,7 +35,6 @@
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
-
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
@@ -65,12 +64,12 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
-        android:name="com.ijiakj.radio.framework.RadioApplication"
+        android:name=".framework.RadioApplication"
         android:allowBackup="true"
         android:icon="@drawable/fm"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/mystyle" >
+        android:theme="@style/mystyle">
 
         <!-- 喜马拉雅appkey -->
         <meta-data
@@ -80,19 +79,19 @@
             android:name="pack_id"
             android:value="com.ijiakj.radio" />
         <!-- 广告 -->
-        <service 
-            android:name="com.iflytek.voiceads.update.DownloadService"/>
-        
+        <service android:name="com.iflytek.voiceads.update.DownloadService" />
+
         <activity
             android:name="com.iflytek.voiceads.request.IFLYBrowser"
             android:screenOrientation="portrait" />
+
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="eae0511f0ae95710bea0c198a163925d" />
 
         <activity
-            android:name="com.ijiakj.radio.activity.GuideActivity"
-            android:screenOrientation="portrait" >
+            android:name=".activity.GuideActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -100,35 +99,39 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.ijiakj.radio.activity.MainActivity"
+            android:name=".activity.MainActivity"
             android:screenOrientation="portrait" />
 
         <!-- 分类列表 -->
         <activity
-            android:name="com.ijiakj.radio.activity.CategoryListActivity"
+            android:name=".activity.CategoryListActivity"
             android:screenOrientation="portrait" />
         <!-- 播放页面 单一实例 -->
         <activity
-            android:name="com.ijiakj.radio.activity.PlayActivity"
+            android:name=".activity.PlayActivity"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait" />
         <!-- 描述页面 -->
         <activity
-            android:name="com.ijiakj.radio.activity.DescribeActivity"
+            android:name=".activity.DescribeActivity"
             android:screenOrientation="portrait" />
         <!-- 广播列表 -->
         <activity
-            android:name="com.ijiakj.radio.activity.BroadcastListActivity"
+            android:name=".activity.BroadcastListActivity"
             android:screenOrientation="portrait" />
         <!-- 搜索列表 -->
         <activity
-            android:name="com.ijiakj.radio.activity.SearchActivity"
+            android:name=".activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SettingActivity"
+            android:theme="@style/AppCompatNoTitleBarTheme"
             android:screenOrientation="portrait" />
         <!-- webView -->
         <activity
-            android:name="com.ijiakj.radio.activity.WebActivity"
+            android:name=".activity.WebActivity"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <!-- 版本更新重新下载 -->
         <activity android:name=".update.ReDownloadActivity" />
         <!-- 版本更新服务 -->
@@ -145,7 +148,7 @@
         <receiver
             android:name="com.ximalaya.ting.android.opensdk.player.receive.PlayerReceiver"
             android:exported="true"
-            android:process=":player" >
+            android:process=":player">
             <intent-filter>
                 <action android:name="com.ximalaya.ting.android.ACTION_CONTROL_START_PAUSE" />
                 <action android:name="com.ximalaya.ting.android.ACTION_CONTROL_PLAY_PRE" />
@@ -158,26 +161,32 @@
             android:name="com.ximalaya.ting.android.opensdk.player.receive.WireControlReceiver"
             android:exported="true"
             android:process=":player" />
-        <receiver android:name="com.ijiakj.radio.framework.CloseReceiver" >
+        <receiver android:name=".framework.CloseReceiver">
             <intent-filter>
                 <action android:name="close_app_all" />
             </intent-filter>
         </receiver>
-        <receiver android:name="com.ijiakj.radio.framework.NetworkChangeListenerReceiver" >
+        <receiver android:name=".framework.NetworkChangeListenerReceiver">
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
         </receiver>
-        
-        <meta-data  android:name="IFLYTEK_APPKEY_AD" android:value="59086d4c"/>
 
-        <!--极光推送:使用jcenter自动集成的开发者，不需要在项目中添加jar和so，jcenter会自动完成依赖；在AndroidManifest.xml中不需要添加任何JPush SDK 相关的配置，jcenter会自动导入。
-        如果开发者需要修改组件属性，可以在本地的 AndroidManifest 中定义同名的组件并配置想要的属性，然后用 xmlns:tools 来控制本地组件覆盖 jcenter 上的组件。示例：-->
-       <!-- <service android:name="cn.jpush.android.service.PushService"
+        <meta-data
+            android:name="IFLYTEK_APPKEY_AD"
+            android:value="59086d4c" />
+
+        <!--
+        极光推送:使用jcenter自动集成的开发者，不需要在项目中添加jar和so，jcenter会自动完成依赖；在AndroidManifest.xml中不需要添加任何JPush SDK 相关的配置，jcenter会自动导入。
+        如果开发者需要修改组件属性，可以在本地的 AndroidManifest 中定义同名的组件并配置想要的属性，然后用 xmlns:tools 来控制本地组件覆盖 jcenter 上的组件。示例：
+        -->
+        <!--
+        <service android:name="cn.jpush.android.service.PushService"
             android:process=":multiprocess"
             tools:node="replace" >
             ……
-        </service>-->
+        </service>
+        -->
     </application>
 
 </manifest>

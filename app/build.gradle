@@ -16,16 +16,16 @@ android {
         minSdkVersion 11
         targetSdkVersion 21
 
-        ndk{
+        ndk {
             //选择要添加的对应cpu类型的.so库。(对应JniLibs中有相应的armeabi， armeabi-v7a 文件夹)
             abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
             // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
         }
 
         manifestPlaceholders = [
-                JPUSH_PKGNAME : "com.ijiakj.radio",
+                JPUSH_PKGNAME: "com.ijiakj.radio",
                 JPUSH_APPKEY : "c4d0b1a1b90165bd377361b8", //JPush上注册的包名对应的appkey.
-                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
         ]
     }
 
@@ -74,5 +74,6 @@ dependencies {
     // 此处以JCore 1.2.3 版本为例。
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation files('libs/TingPhoneOpenSDK_5.2.0.jar')
+    implementation 'com.android.support:appcompat-v7:22.2.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
 }
-

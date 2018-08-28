@@ -51,8 +51,8 @@ public class MainActivity extends BaseActivity implements
 	private ImageView mBottomPlayFluctuate;
 	private TextView mBottomPlayTv;
 	private RelativeLayout mBottomPlayRl;
-	private ImageView mMainSerach;
-	
+	private ImageView mMainSerach, main_setting;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -69,6 +69,7 @@ public class MainActivity extends BaseActivity implements
 		mMainCategoryTv = (TextView) findViewById(R.id.main_category_tv);
 		mMainBroadcastTv = (TextView) findViewById(R.id.main_broadcast_tv);
 		mMainSerach = (ImageView) findViewById(R.id.main_serach);
+		main_setting = (ImageView) findViewById(R.id.main_setting);
 		mMainViewpager = (ViewPager) findViewById(R.id.main_viewpager);
 		mBottomPlayRl = (RelativeLayout) findViewById(R.id.bottom_play_rl);
 		mBottomPlayIv = (CircleImageView) findViewById(R.id.bottom_play_iv);
@@ -108,6 +109,7 @@ public class MainActivity extends BaseActivity implements
 		mMainBroadcastTv.setOnClickListener(this);
 		mBottomPlayRl.setOnClickListener(this);
 		mMainSerach.setOnClickListener(this);
+		main_setting.setOnClickListener(this);
 	}
 	
 	private BroadcastReceiver myReceiver = new BroadcastReceiver() {
@@ -164,6 +166,11 @@ public class MainActivity extends BaseActivity implements
 			break;
 		case R.id.main_serach: {
 			Intent intent = new Intent(this, SearchActivity.class);
+			startActivity(intent);
+		}
+			break;
+		case R.id.main_setting: {
+			Intent intent = new Intent(this, SettingActivity.class);
 			startActivity(intent);
 		}
 			break;
