@@ -46,8 +46,6 @@ public class Constant {
 	public static final String updateApp = HOST + "api/common/app/getLastestApp";
 	public static int PLATFORM;
 
-	//3K 地址
-    public static final String HOST_3K_URL = "http://5597755.com/Lottery_server/get_init_data.php?type=android&appid=jqi0233";
 }
 
 

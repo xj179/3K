@@ -21,6 +21,13 @@ android {
             // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
         }
 
+        // If you have different applicationIds for buildTypes or productFlavors uncomment this block.
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["resourcePackageName": "com.ijiakj.radio"]
+            }
+        }
+
  /*       manifestPlaceholders = [
                 JPUSH_PKGNAME: "com.ijiakj.radio",
                 JPUSH_APPKEY : "c4d0b1a1b90165bd377361b8", //JPush上注册的包名对应的appkey.
@@ -44,13 +51,14 @@ android {
         exclude 'META-INF/LICENSE'
         exclude 'META-INF/LICENSE.txt'
     }
+
     productFlavors {
         /*因为第一个是上传到了魅族应用商店所以魅族用默认的ID(跟包名是同一个)*/
-        sanKMeiZu {
+        meizu {
           /*  minSdkVersion 19
             versionCode 12
             versionName '2.3'*/
-            applicationId 'com.ijiakj.radio'
+            applicationId 'com.ijiakj.radio.meizu'
             manifestPlaceholders = [
                     JPUSH_PKGNAME: "com.ijiakj.radio",
                     JPUSH_APPKEY : "c4d0b1a1b90165bd377361b8", //JPush上注册的包名对应的appkey.
@@ -58,6 +66,16 @@ android {
             ]
         }
 
+        baidu {
+            applicationId 'com.ijiakj.radio.baidu'
+            manifestPlaceholders = [
+                    JPUSH_PKGNAME: "com.ijiakj.radio.baidu",
+                    JPUSH_APPKEY : "4727b054f5c2706da7c1f5de", //JPush上注册的包名对应的appkey.
+                    JPUSH_CHANNEL: "daidu", //暂时填写默认值即可.
+            ]
+        }
+
+        //        sanliuling {
         sanK360 {
             applicationId 'com.ijiakj.radio.sanliuling'
             manifestPlaceholders = [
@@ -67,6 +85,14 @@ android {
             ]
         }
     }
+
+   /* 问题：Error:java.util.concurrent.ExecutionException: com.android.builder.internal.aapt.AaptException:
+    这个问题一般会在打包的时候遇到，查阅了网上很多资料都是说因为项目路径过长原因导致，但是其实很多时候并不是的，其主要原因是builde.gradle会在你打包的时候去检查你的res资源，一旦出现不规范就会出现该错误。
+    以上是问题所在，解决方案：
+    当然解决方案就是我们主动去禁止它检查，即在你Module的builde.gradle中添加以下代码：*/
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
 }
 
 dependencies {

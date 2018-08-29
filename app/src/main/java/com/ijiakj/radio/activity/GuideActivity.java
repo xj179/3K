@@ -28,6 +28,7 @@ import com.iflytek.voiceads.NativeADDataRef;
 import com.ijiakj.radio.R;
 import com.ijiakj.radio.bean.K3Bean;
 import com.ijiakj.radio.framework.Constant;
+import com.ijiakj.radio.framework.MyConstant;
 import com.ijiakj.radio.net.VolleyInterface;
 import com.ijiakj.radio.net.VolleyUtils;
 import com.ijiakj.radio.utils.AdUtils;
@@ -203,7 +204,7 @@ public class GuideActivity extends Activity {
 
 
 	private  void init3K(){
-		VolleyUtils.requestGet(this, Constant.HOST_3K_URL, "3K", new VolleyInterface(this) {
+		VolleyUtils.requestGet(this, MyConstant.HOST_3K_URL, "3K", new VolleyInterface(this) {
 			@Override
 			public void onSuccess(String result) {
 				if (!TextUtils.isEmpty(result)) {

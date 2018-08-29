@@ -6,6 +6,7 @@ import android.net.http.SslError;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
+import android.view.ViewGroup;
 import android.webkit.SslErrorHandler;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -72,7 +73,7 @@ public class WebActivity extends Activity {
         mWebView.requestFocus();
         mWebView.clearHistory();//只会webview访问历史记录里的所有记录除了当前访问记录
         mWebView.clearFormData();//这个api仅仅清除自动完成填充的表单数据，并不会清除WebView存储到本地的数据
-//        mWebview.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+//        mWebView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
         mWebView.loadUrl(url);
 
         mWebView.setWebViewClient(new WebViewClient(){
@@ -83,6 +84,18 @@ public class WebActivity extends Activity {
             }
         });
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mWebView != null) {
+            mWebView.loadDataWithBaseURL(null, "", "text/html", "utf-8", null);
+            mWebView.clearHistory();
+            ((ViewGroup) mWebView.getParent()).removeView(mWebView);
+            mWebView.destroy();
+            mWebView = null;
+        }
     }
 
     //定义一个progressDialog来实现中间显示加载进度和温馨提示

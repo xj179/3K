@@ -1,10 +1,10 @@
 <resources>
     <!--  <string name="app_name">3K彩电台</string>-->
-    <string name="app_name">3K彩软件</string>
+    <!--<string name="app_name">3K彩软件</string>-->
 
 
     <!--<string name="welcome_text">欢迎使用3K彩电台!</string>-->
-    <string name="welcome_text">欢迎使用3K彩软件!</string>
+    <!--<string name="welcome_text">欢迎使用3K彩软件!</string>-->
 
 
     <string name="header_hint_refresh_normal">下拉刷新</string>

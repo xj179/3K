@@ -39,7 +39,7 @@
         android:layout_below="@id/title"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:src="@drawable/fm" />
+        android:src="@drawable/ic_launcher" />
 
     <TextView
         android:id="@+id/name_iv"
