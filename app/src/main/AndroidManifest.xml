@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ijiakj.radio"
-    android:versionCode="12"
-    android:versionName="2.3">
-
-    <uses-sdk
-        android:minSdkVersion="11"
-        android:targetSdkVersion="21" />
+    package="com.ijiakj.radio">
 
     <!-- Required -->
     <permission
-        android:name="ccom.ijiakj.radio.permission.JPUSH_MESSAGE"
+        android:name="${applicationId}.permission.JPUSH_MESSAGE"
         android:protectionLevel="signature" />
 
     <!-- Required -->
-    <uses-permission android:name="com.ijiakj.radio.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="${applicationId}.permission.JPUSH_MESSAGE" />
     <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -77,7 +71,7 @@
             android:value="edbd6b432a26d670b383959400ac8da6" />
         <meta-data
             android:name="pack_id"
-            android:value="com.ijiakj.radio" />
+            android:value="${applicationId}" />
         <!-- 广告 -->
         <service android:name="com.iflytek.voiceads.update.DownloadService" />
 

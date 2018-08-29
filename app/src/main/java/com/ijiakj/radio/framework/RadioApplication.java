@@ -21,6 +21,7 @@ import android.util.Log;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
+import com.ijiakj.radio.BuildConfig;
 import com.ijiakj.radio.net.MultiPartStack;
 import com.ijiakj.radio.update.FileUtil;
 import com.ijiakj.radio.utils.AdUtils;
@@ -35,7 +36,7 @@ import cn.jpush.android.api.JPushInterface;
  */
 public class RadioApplication extends Application {
 
-    public static final String MAIN_PROCESS_NAME = "com.ijiakj.radio";
+    public static final String MAIN_PROCESS_NAME = BuildConfig.APPLICATION_ID ;
     private static Context mContext;
     private static int mMainThreadId;
     private static Handler mMainThreadHandler;
