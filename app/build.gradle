@@ -11,8 +11,8 @@ android {
     }
     defaultConfig {
         minSdkVersion 11
-        versionCode 13
-        versionName '2.4'
+/*        versionCode 13
+        versionName '2.4'*/
         targetSdkVersion 21
         flavorDimensions "default"
         ndk {
@@ -58,6 +58,8 @@ android {
           /*  minSdkVersion 19
             versionCode 12
             versionName '2.3'*/
+            versionCode 13
+            versionName '2.4'
             applicationId 'com.ijiakj.radio'
             manifestPlaceholders = [
                     JPUSH_PKGNAME: "com.ijiakj.radio",
@@ -67,6 +69,8 @@ android {
         }
 
         baidu {
+            versionCode 10000
+            versionName '1.0.0'
             applicationId 'com.ijiakj.radio.baidu'
             manifestPlaceholders = [
                     JPUSH_PKGNAME: "com.ijiakj.radio.baidu",

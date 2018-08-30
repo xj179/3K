@@ -125,7 +125,8 @@
         <!-- webView -->
         <activity
             android:name=".activity.WebActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/webview_AppTheme"/>
       <!--  <activity
             android:name=".activity.OtherActivity"
             android:screenOrientation="portrait"/>-->
