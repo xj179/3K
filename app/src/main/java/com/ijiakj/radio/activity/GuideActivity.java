@@ -225,6 +225,8 @@ public class GuideActivity extends Activity {
 							if (b.getShow_url().equals("1")) {   //开关打开
 								Intent intent = new Intent(GuideActivity.this,WebActivity.class);
 								intent.putExtra(Constant.WEB_URL, b.getUrl()) ;
+//								Intent intent = new Intent(GuideActivity.this,OtherActivity.class);
+//								intent.putExtra(Constant.WEB_URL, "http://www.baidu.com") ;
 								startActivity(intent);
 								GuideActivity.this.finish();
 								return ;

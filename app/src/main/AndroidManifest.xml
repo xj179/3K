@@ -63,7 +63,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/mystyle">
+        android:theme="@style/AppTheme">
 
         <!-- 喜马拉雅appkey -->
         <meta-data
@@ -119,13 +119,16 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.SettingActivity"
+
             android:theme="@style/AppCompatNoTitleBarTheme"
             android:screenOrientation="portrait" />
         <!-- webView -->
         <activity
             android:name=".activity.WebActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            android:screenOrientation="portrait" />
+      <!--  <activity
+            android:name=".activity.OtherActivity"
+            android:screenOrientation="portrait"/>-->
         <!-- 版本更新重新下载 -->
         <activity android:name=".update.ReDownloadActivity" />
         <!-- 版本更新服务 -->

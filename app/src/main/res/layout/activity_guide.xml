@@ -32,7 +32,7 @@
         
         <TextView
             android:id="@+id/skip_ad"
-            android:layout_width="@dimen/x60"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/x30"
             android:background="@drawable/btn_gray_stroke_selector"
             android:layout_alignParentRight="true"

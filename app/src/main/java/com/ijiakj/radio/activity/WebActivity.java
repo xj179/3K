@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.net.http.SslError;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.SslErrorHandler;
@@ -13,6 +14,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.ijiakj.radio.R;
 import com.ijiakj.radio.framework.Constant;
@@ -29,7 +31,7 @@ import java.io.File;
  * 更新时间   $Date$
  * 更新描述   ${TODO}
  */
-public class WebActivity extends Activity {
+public class WebActivity extends AppCompatActivity {
 
     private WebView mWebView;
     private RelativeLayout mLoadingTL;
@@ -76,13 +78,13 @@ public class WebActivity extends Activity {
 //        mWebView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
         mWebView.loadUrl(url);
 
-        mWebView.setWebViewClient(new WebViewClient(){
+  /*      mWebView.setWebViewClient(new WebViewClient(){
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 mWebView.loadUrl(url);
                 return true;
             }
-        });
+        });*/
 
     }
 
@@ -90,9 +92,9 @@ public class WebActivity extends Activity {
     protected void onDestroy() {
         super.onDestroy();
         if (mWebView != null) {
-            mWebView.loadDataWithBaseURL(null, "", "text/html", "utf-8", null);
+     /*       mWebView.loadDataWithBaseURL(null, "", "text/html", "utf-8", null);
             mWebView.clearHistory();
-            ((ViewGroup) mWebView.getParent()).removeView(mWebView);
+            ((ViewGroup) mWebView.getParent()).removeView(mWebView);*/
             mWebView.destroy();
             mWebView = null;
         }
