@@ -75,6 +75,8 @@ public class MainActivity extends BaseActivity implements
 		mBottomPlayIv = (CircleImageView) findViewById(R.id.bottom_play_iv);
 		mBottomPlayFluctuate = (ImageView) findViewById(R.id.bottom_play_fluctuate);
 		mBottomPlayTv = (TextView) findViewById(R.id.bottom_play_tv);
+
+		Log.i("TAG", "initView: 测试提交...");
 	}
 
 	@Override
