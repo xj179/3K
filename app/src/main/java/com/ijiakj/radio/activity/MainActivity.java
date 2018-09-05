@@ -77,6 +77,7 @@ public class MainActivity extends BaseActivity implements
 		mBottomPlayTv = (TextView) findViewById(R.id.bottom_play_tv);
 
 		Log.i("TAG", "initView: 测试提交...");
+		Log.i("TAG", "initView: 测试提交2...");
 	}
 
 	@Override
